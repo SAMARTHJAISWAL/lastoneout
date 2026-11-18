@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>lastoneout — what's your project's bus factor?</title>
+  <meta name="description" content="How many people can leave before your code has no active author? One command, any git repository, nothing uploaded. Plus the bus factors of famous open-source projects.">
+  <meta property="og:title" content="lastoneout — what's your project's bus factor?">
+  <meta property="og:description" content="How many people can leave before your code has no active author? One command, any git repo. See how famous open-source projects score.">
+  <meta property="og:image" content="https://lastoneout.vercel.app/og.png">
+  <meta property="og:url" content="https://lastoneout.vercel.app/">
+  <link rel="canonical" href="https://lastoneout.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#100e0a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="top">
+      <a class="brand" href="./"><img src="favicon.svg" alt="" width="26" height="26">lastoneout</a>
+      <a href="https://github.com/SAMARTHJAISWAL/lastoneout">GitHub</a>
+    </header>
+
+    <section class="hero">
+      <h1>If your top people quit tomorrow, who still knows the code?</h1>
+      <p class="lede">One command reads your git history and tells you your <b>bus factor</b>: how many people can leave before most of your code has no active author.</p>
+      <div class="cmd"><code id="cmd">npx github:SAMARTHJAISWAL/lastoneout</code><button id="copy" type="button">Copy</button></div>
+      <p class="small">Run it inside any git repository. Needs Node 18+. Nothing is uploaded.</p>
+    </section>
+
+    <section class="yours" id="yours" hidden>
+      <h2>Your project: <span id="your-name"></span></h2>
+      <div id="your-card"></div>
+    </section>
+
+    <section>
+      <h2>How famous projects score</h2>
+      <p class="small" id="about"></p>
+      <div class="tabs" role="group" aria-label="Which bus factor to rank by">
+        <button id="by-all" class="on" type="button">Everyone who ever committed</button>
+        <button id="by-today" type="button">Only people active this year</button>
+      </div>
+      <ol class="board" id="board"></ol>
+    </section>
+
+    <section class="how">
+      <h2>What the number means</h2>
+      <p>For every file, lastoneout scores each contributor from three things: who created it, how often they changed it, and how much others changed it. The formula comes from <a href="https://arxiv.org/abs/1604.06766">Avelino et al., “A Novel Approach for Estimating Truck Factors” (ICPC 2016)</a>.</p>
+      <p>It then removes the biggest authors one at a time, until the remaining authors cover less than half of the code. That count is the bus factor. The stricter view, and the command line's headline number, first remove anyone with no commit in 12 months.</p>
+      <p><b>A low score is a warning, not a verdict.</b> It only sees git history. Reviewers, maintainers who merge other people's work, and everything people carry in their heads are invisible to it. In the stricter view, a 0 means most of the code's main authors have moved on, not that nobody looks after it. Many of these projects have busy maintainers.</p>
+    </section>
+  </main>
+  <footer>The leaderboard has no individual names. <a href="https://github.com/SAMARTHJAISWAL/lastoneout">Source</a> · MIT</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
