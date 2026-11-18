@@ -1,0 +1,15 @@
+{
+  "name": "lastoneout",
+  "version": "0.1.0",
+  "description": "How many people can leave before your code has no active author? A bus-factor report for any git repository.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "lastoneout": "bin/lastoneout.js" },
+  "files": ["bin", "src"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/model.test.js test/cli.test.js",
+    "survey": "node scripts/survey.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
