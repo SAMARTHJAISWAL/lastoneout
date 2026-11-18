@@ -9,7 +9,7 @@ import { badgeUrl, cardOf, pack } from "../src/share.js";
 import { render, renderWhatIf } from "../src/terminal.js";
 
 const VERSION = "0.1.0";
-const SITE = "https://samarthjaiswal.github.io/lastoneout/";
+const SITE = "https://lastoneout.vercel.app/";
 
 const USAGE = `lastoneout: how many people can leave before your code has no active author?
 

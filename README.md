@@ -1,7 +1,7 @@
 # lastoneout
 
 [![CI](https://github.com/SAMARTHJAISWAL/lastoneout/actions/workflows/ci.yml/badge.svg)](https://github.com/SAMARTHJAISWAL/lastoneout/actions/workflows/ci.yml)
-[![See the leaderboard](https://img.shields.io/badge/see-the%20leaderboard-ffb224)](https://samarthjaiswal.github.io/lastoneout/)
+[![See the leaderboard](https://img.shields.io/badge/see-the%20leaderboard-ffb224)](https://lastoneout.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **If your top people quit tomorrow, who still knows the code?**
@@ -14,7 +14,7 @@ npx github:SAMARTHJAISWAL/lastoneout
 
 Run it inside any git repository. You need Node 18 or newer and git. There's nothing to install or sign up for, and nothing is uploaded.
 
-[![lastoneout: a bus factor of 1, with the share of code without an author rising as top people leave](web/og.png)](https://samarthjaiswal.github.io/lastoneout/)
+[![lastoneout: a bus factor of 1, with the share of code without an author rising as top people leave](web/og.png)](https://lastoneout.vercel.app/)
 
 ## What you get
 
@@ -62,7 +62,7 @@ $ lastoneout --what-if "Priya"
 
 ## How famous projects score
 
-[The leaderboard](https://samarthjaiswal.github.io/lastoneout/) measures 38 well-known open-source projects from their full history. By the published method, **14 of the 38 have a bus factor of 1**, and 25 have 2 or less. Each project has a curve showing how fast its code loses its authors. The leaderboard shows totals only and names no individuals.
+[The leaderboard](https://lastoneout.vercel.app/) measures 38 well-known open-source projects from their full history. By the published method, **14 of the 38 have a bus factor of 1**, and 25 have 2 or less. Each project has a curve showing how fast its code loses its authors. The leaderboard shows totals only and names no individuals.
 
 These numbers are easy to over-read, so see [what it can't see](#what-it-cant-see).
 
