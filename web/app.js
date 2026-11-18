@@ -27,9 +27,9 @@ const tone = (b) => (b <= 1 ? "bad" : b === 2 ? "warn" : b <= 4 ? "ok" : "good")
 
 function details(r, curve = r.curve) {
   return `<div class="stats">
-      <span><b>${n(r.files)}</b> code files</span>
-      <span><b>${n(r.commits)}</b> commits</span>
-      <span><b>${n(r.activePeople)}</b> of ${n(r.people)} people active</span>
+      <span><b>${n(r.files)}</b> code file${r.files === 1 ? "" : "s"}</span>
+      <span><b>${n(r.commits)}</b> commit${r.commits === 1 ? "" : "s"}</span>
+      <span><b>${n(r.activePeople)}</b> of ${n(r.people)} ${r.people === 1 ? "person" : "people"} active</span>
       <span><b>${r.withoutAuthor}%</b> without an active author today</span>
     </div>${curveSvg(curve)}`;
 }

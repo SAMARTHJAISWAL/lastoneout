@@ -203,5 +203,6 @@ test("the report has no color codes unless asked", () => {
   const text = render("repo", s, { now: NOW });
   assert.ok(!text.includes("\x1b["));
   assert.match(text, /BUS FACTOR {2}1/);
+  assert.match(render("repo", { ...s, files: 1, commits: 1 }, { now: NOW }), /1 code file · 1 commit ·/);
   assert.ok(render("repo", s, { now: NOW, color: true }).includes("\x1b["));
 });

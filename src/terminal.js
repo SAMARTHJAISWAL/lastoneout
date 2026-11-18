@@ -34,7 +34,7 @@ export function render(label, s, { color = false, now = Date.now() / 1000, top =
   const tone = s.busFactor <= 1 ? c.red : s.busFactor === 2 ? c.yellow : c.green;
   const out = [""];
   out.push(`  ${c.bold("lastoneout")} ${c.dim("·")} ${label}`);
-  out.push(c.dim(`  ${n(s.files)} code files · ${n(s.commits)} commits · ${plural(s.people, "person").replace("persons", "people")}, ${n(s.activePeople)} active`));
+  out.push(c.dim(`  ${plural(s.files, "code file")} · ${plural(s.commits, "commit")} · ${plural(s.people, "person").replace("persons", "people")}, ${n(s.activePeople)} active`));
   out.push("");
   out.push(`  ${c.bold("BUS FACTOR")}  ${tone(c.bold(s.busFactor))}`);
   out.push(`  ${verdict(s)}`);
